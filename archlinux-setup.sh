@@ -42,7 +42,7 @@ sed -i 's/^#zh_CN.UTF-8/zh_CN.UTF-8/' /etc/locale.gen
 locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 
-pacman -S --noconfirm dhcp networkmanager zsh sudo vi
+pacman -S --noconfirm dhcp networkmanager zsh sudo vi git
 systemctl enable NetworkManager
 
 echo cc > /etc/hostname
