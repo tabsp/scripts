@@ -20,6 +20,15 @@ echo "exec slstatus &" >> $HOME/.xinitrc
 echo "exec fcitx5 &" >> $HOME/.xinitrc
 echo "exec dwm" >> $HOME/.xinitrc
 
+cat > $HOME/.pam_environment <<EOF
+GTK_IM_MODULE DEFAULT=fcitx
+QT_IM_MODULE  DEFAULT=fcitx
+XMODIFIERS    DEFAULT=\@im=fcitx
+INPUT_METHOD  DEFAULT=fcitx
+SDL_IM_MODULE DEFAULT=fcitx
+GLFW_IM_MODULE DEFAULT=ibus
+EOF
+
 YAY_DIR=/tmp/yay
 rm -rf $YAY_DIR
 git clone https://aur.archlinux.org/yay.git $YAY_DIR
