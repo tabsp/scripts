@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# 同步系统时间
 timedatectl set-ntp true
 
 fdisk /dev/sda <<EOF
@@ -29,7 +28,7 @@ mount /dev/sda2 /mnt
 mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
 
-sed -i '1i\Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
+sed -i '1i\Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
 
 pacstrap /mnt base linux linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
