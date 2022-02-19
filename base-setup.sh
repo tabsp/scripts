@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm git base-devel xorg-apps xorg-server xorg-xinit neovim tmux xsel ttf-joypixels wqy-microhei ttf-jetbrains-mono fcitx5-im fcitx5-rime picom ninja ripgrep lazygit
+sudo pacman -S --noconfirm git base-devel xorg-apps xorg-server xorg-xinit neovim tmux xsel ttf-joypixels wqy-microhei ttf-jetbrains-mono fcitx5-im fcitx5-rime picom ninja ripgrep lazygit ranger fd fzf bat man-db
 
 SUCKLESS_DIR=$HOME/suckless
 rm -rf $SUCKLESS_DIR
